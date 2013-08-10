@@ -36,7 +36,10 @@ A simple server side minifier for CSS and Javascript
 <h2>To Do</h2>
 <ul>
     <li>
-        Documents
+        Full Documents
+    </li>
+    <li>
+        Keep .min.css or .min.js files if there are not corresponding .css or .js files
     </li>
     <li>
         Write tests files  (Sorry, I am not good at it)
