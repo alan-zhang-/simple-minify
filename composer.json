@@ -1,5 +1,12 @@
 {
     "name": "alanzhang/simple-minify",
+    "authors": [
+        {
+            "name": "Alan Zhang",
+            "email": "alanzhang717@gmail.com",
+            "website": "alan-zhang.com"
+        }
+    ],
     "require": {
         "php": ">=5.3.0"
     },
