@@ -9,7 +9,9 @@ A simple server side minifier for CSS and Javascript
 </p>
 <p>
 {
-    "alanzhang/simple-minify": "dev-master",
+    "require": {
+        "alanzhang/simple-minify": "dev-master"
+    },
     "config": {
         "bin-dir": "/usr/local/bin/"
     }
