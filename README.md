@@ -22,6 +22,7 @@ A simple server side minifier for CSS and Javascript
 <p>
     After you installed simple-minify, you simpliy get an global simple-minify command.
     Type following command by your cli, all your css and js files within public directory would get a compressed files named with origined-name.min.js or origined-name.min.css
+    <br>
     simple-minify /var/www/your-project/public
 </p>
 
