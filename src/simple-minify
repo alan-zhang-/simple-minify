@@ -10,10 +10,28 @@ class SimpleMinify
     public function __construct()
     {
         $this->count = $_SERVER['argc'];
-        $this->parameters = $_SERVER['argv'];
+        $this->parameters = $this->getParameters();
         $this->doMyjob();
     }
 
+    protected function getParameters()
+    {
+        $parameters = $_SERVER['argv'];
+
+        if ($this->count === 2) {
+            if ($parameters[1] === '.' or $parameters[1] === './') {
+                $parameters[1] = getcwd();
+            } elseif (substr($parameters[1], 0, 1) !== '/') {
+                $parameters[1] = getcwd() . '/' . $parameters[1];
+            }
+        } elseif ($this->count === 1) {
+            $parameters[1] = getcwd();    
+            $this->count = 2;    
+        }
+
+        return $parameters;
+    }
+    
     public function doMyjob()
     {
         if ($this->count == 2) {
