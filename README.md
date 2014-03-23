@@ -26,7 +26,7 @@ A simple server side minifier for CSS and Javascript
     How to use
 </h2>
 <p>
-    After you installed simple-minify, you simpliy get an global simple-minify command.
+    After you installed simple-minify, you will get a global <strong>simple-minify</strong> command.
     Type following command by your cli, all your css and js files within public directory would get a compressed files named with origined-name.min.js or origined-name.min.css
 </p>
 <pre>
