@@ -38,3 +38,10 @@ simple-minify ./
 simple-minify css
 simple-minify css/
 </pre>
+
+<p>
+    The regex may help if you want to make a project search/replace
+</p>
+<pre>
+(?<!\.min\.)(?<=\.)css(?='|")
+</pre>
