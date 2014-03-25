@@ -54,9 +54,16 @@ class SimpleMinify
                     array_shift($files);array_shift($files);  //remove the first . and second .. 
 
                     foreach ($files as $file) {
-                        if (is_file($file) and substr_count($file, '.min.') === 0) {
-                            if (in_array(pathinfo($file, PATHINFO_EXTENSION), $this->allowedExtensions)) {
-                                shell_exec("yuglify $file");
+                        if (is_file($file)) {
+                            $extension = pathinfo($file, PATHINFO_EXTENSION);
+
+                            if (in_array($extension, $this->allowedExtensions)) {
+                                $extensionLength = strlen($extension);
+                                $fileNameLastPart = substr($file, -($extensionLength + 5));
+
+                                if ($fileNameLastPart !== ('.min.' . $extension)) {
+                                    shell_exec("yuglify $file");
+                                }
                             }
                         } elseif (is_dir($file)) {
                             $subDirectorys[] = $file;
